@@ -1,0 +1,107 @@
+/* Styling untuk seluruh aplikasi */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header styling */
+header {
+  background-color: #FF5733;
+  color: white;
+  padding: 20px;
+  position: relative; /* Untuk memungkinkan penggunaan position absolute di dalamnya */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Konten utama tetap di tengah */
+}
+
+/* Styling untuk title di pojok kiri atas */
+.header-title {
+  position: absolute; /* Letakkan relatif terhadap header */
+  top: 10px; /* Jarak dari atas */
+  left: 15px; /* Jarak dari kiri */
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white; /* Warna teks */
+}
+
+/* Search form styling */
+form {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+form input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 10px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus {
+  border-color: #FF5733;
+}
+
+form button {
+  background-color: #FF5733;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #e04c2c;
+}
+
+/* Container untuk kartu film */
+div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Kartu film */
+div > div {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 200px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Shadow default lebih tebal */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+div > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Shadow saat hover lebih besar */
+}
+
+/* Gambar film */
+div > div img {
+  width: 100%;
+  height: auto; /* Menjaga proporsi gambar */
+  aspect-ratio: 2 / 3; /* Rasio aspek untuk gambar */
+  object-fit: contain; /* Gambar akan ditampilkan sepenuhnya tanpa terpotong */
+  background-color: #f4f4f4; /* Menambahkan warna latar belakang jika gambar tidak memenuhi rasio */
+  border-bottom: 1px solid #ddd;
+}
+
+/* Judul film */
+div > div h3 {
+  font-size: 1rem;
+  margin: 10px;
+  text-align: center;
+  color: #333;
+}
